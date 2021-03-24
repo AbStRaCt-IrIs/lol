@@ -203,6 +203,9 @@ include device/qcom/sepolicy_vndr/SEPolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
+# SELinux neverallows
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # Shim
 TARGET_LD_SHIM_LIBS := \
     /product/lib64/libdpmframework.so|libdpmframework_shim.so
